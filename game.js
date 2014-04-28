@@ -23,37 +23,37 @@ var sImage,bImage,meImage,msImage,zImage,sImage2,sImage3,baImage, lImage,daImage
 var lsImage, lsImage2, lsImage3;
 
 sImage = new Image();
-sImage.src = 'spaceship.png';
+sImage.src = 'img/spaceship.png';
 bImage = new Image();
-bImage.src = 'bullet.png';
+bImage.src = 'img/bullet.png';
 meImage = new Image();
-meImage.src = 'meteorite.png';
+meImage.src = 'img/meteorite.png';
 msImage = new Image();
-msImage.src = 'monster1.png';
+msImage.src = 'img/monster1.png';
 cImage = new Image();
-cImage.src = 'crash.png';
+cImage.src = 'img/crash.png';
 zImage = new Image();
-zImage.src = 'zerg.png';
+zImage.src = 'img/zerg.png';
 sImage2 = new Image();
-sImage2.src = 'spaceship2.png';
+sImage2.src = 'img/spaceship2.png';
 sImage3 = new Image();
-sImage3.src = 'spaceship3.png';
+sImage3.src = 'img/spaceship3.png';
 baImage = new Image();
-baImage.src = 'background.png';
+baImage.src = 'img/background.png';
 lImage = new Image();
-lImage.src = 'load.JPG';
+lImage.src = 'img/load.JPG';
 daImage = new Image();
-daImage.src = 'damage.png';
+daImage.src = 'img/damage.png';
 deImage = new Image();
-deImage.src = 'death.png';
+deImage.src = 'img/death.png';
 hImage = new Image();
-hImage.src = 'health.png';
+hImage.src = 'img/health.png';
 lsImage = new Image();
-lsImage.src = 'lspaceship.png';
+lsImage.src = 'img/lspaceship.png';
 lsImage2 = new Image();
-lsImage2.src = 'lspaceship2.png';
+lsImage2.src = 'img/lspaceship2.png';
 lsImage3 = new Image();
-lsImage3.src = 'lspaceship3.png';
+lsImage3.src = 'img/lspaceship3.png';
 
 function launchNewBullet() {
 	var x = spaceship.x + spaceship.procent();
@@ -438,27 +438,26 @@ canvas.onclick = function (e) {
 
 }
 
-$(document).keypress (function(e) {
-        
-      	if(e.keyCode === 119 ) {
+$(window).keypress (function(e) {
+      	        if(e.charCode === 119 ) {
 			up = true;
 		}  
 			
-		if(e.keyCode === 115) {
+		if(e.charCode === 115) {
 			down = true;		
 		}
       
-		if(e.keyCode === 97) {
+		if(e.charCode === 97) {
 			left = true;
 			isToRight = false;
 		}
 
-		if(e.keyCode === 100 ) {
+		if(e.charCode === 100 ) {
 			right = true;
 			isToRight = true;
 		}	
 		
-		if(e.keyCode === 32) {
+		if(e.charCode === 32) {
 
 			fire = true;
 
@@ -470,7 +469,7 @@ $(document).keypress (function(e) {
 $(document).keyup( function(e) {
 
 
-	if(e.keyCode === 87 ) {
+	        if(e.keyCode === 87 ) {
 			up = false;
 		}  
 			
@@ -489,8 +488,6 @@ $(document).keyup( function(e) {
 		if(e.keyCode === 32) {
 			fire = false;
 		}
-	
-
 
 		e.preventDefault();
 
